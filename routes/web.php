@@ -14,7 +14,7 @@ use Spatie\Activitylog\Models\Activity;
 */
 
 Route::get('/', function () {
-    return Activity::all();
+    // return Activity::all();
 
-    // return view('welcome');
+    return view('welcome');
 });

@@ -12,6 +12,10 @@ use Spatie\Activitylog\LogOptions;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable, LogsActivity;
+    protected static $logAttributes = ['name', 'email','password'];
+    protected static $logName = 'user';
+    protected static $ignoreChangedAttributes = ['password','updated_at'];
+
 
     /**
      * The attributes that are mass assignable.
